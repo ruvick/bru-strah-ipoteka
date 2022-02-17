@@ -233,7 +233,7 @@ h4 {
 	}
 
 	&__card {
-		padding: 30px;
+		padding: 35px;
 		background: #fff;
 		border-radius: 10px;
 		overflow: hidden;
@@ -268,8 +268,8 @@ h4 {
 	}
 
 	&__card-text {
-		font-size: 16px;
-		line-height: 19.2px;
+		font-size: 20px;
+		line-height: 1.3;
 	}
 }
 
@@ -515,6 +515,7 @@ h4 {
 
 .needed {
 	padding: 45px 0;
+	background: #eff7ff82;
 }
 
 .needed__title {
@@ -806,8 +807,8 @@ h4 {
 }
 
 .reviews__descp {
-	font-size: 16px;
-	line-height: 19.2px;
+	font-size: 18px;
+	line-height: 1.3;
 	text-align: center;
 	margin-bottom: 10px;
 }
