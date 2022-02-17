@@ -1,12 +1,73 @@
 <!DOCTYPE html>
 <html lang="ru">
-@@include('_head.html',{
-"title":"Ипотечное страхование - выгодно и быстро"
-})
+<head>
+	<title>Ипотечное страхование - выгодно и быстро</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="css/style.min.css">
+	<!-- <link rel="stylesheet" href="css/fancybox.css"> -->
+	<link rel="icon" type="image/png" href="img/favicons/icon256.png" sizes="256x256">
+	<link rel="icon" type="image/png" href="img/favicons/icon128.png" sizes="128x128">
+	<link rel="icon" type="image/png" href="img/favicons/icon64.png" sizes="64x64">
+	<link rel="icon" type="image/png" href="img/favicons/icon32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="img/favicons/icon16.png" sizes="16x16">
+	<link rel="icon" type="image/png" href="img/favicons/icon.svg" sizes="any">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 
 <body>
 	<div class="wrapper">
-		@@include('_header.html',{})
+		<header id="header" class="header">
+  <div class="header__container _container">
+
+    <div class="header__row d-flex">
+
+      <a href="index.html" class="logo-icon header__logo">
+        <!-- <? bloginfo("url"); ?> -->
+        <p class="logo-icon__text">Ипотечное <span>страхование</span></p>
+      </a>
+
+      <ul class="menu-list header__menu-list d-flex">
+        <li class="menu-list__item"><a href="#" class="menu-list__link">Преимущества</a></li>
+        <li class="menu-list__item"><a href="#" class="menu-list__link">Как приобрести полис</a></li>
+        <li class="menu-list__item"><a href="#" class="menu-list__link">Заявка</a></li>
+      </ul>
+      <!-- <?php wp_nav_menu( array('theme_location' => 'menu_main','menu_class' => 'menu__list',
+						'container_class' => 'menu__list','container' => false )); ?>  -->
+
+      <div class="contacts header__contacts d-flex">
+        <a href="tel:88003454567" class="contacts__phone header__phone">8 800 345-45-67</a>
+        <!-- <a href="tel:<? echo preg_replace('/[^0-9]/', '', $tel); ?>"><? echo $tel = carbon_get_theme_option("as_phone_1"); ?></a> -->
+        <a href="#callback" class="header__popup-link btn _popup-link">Заявка на расчет</a>
+      </div>
+      <a href="tel:84951700000" class="mob-phone-icon header__mob-phone-icon"></a>
+      <!-- <a href="tel:<? echo preg_replace('/[^0-9]/', '', $tel); ?>" class="mob-callback__phone"></a> -->
+
+      <div class="icon-menu" aria-label="Бургер меню">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+    </div>
+
+  </div>
+</header>
+
+<!-- Мобильное меню -->
+<div class="mob-menu header__mob-menu">
+  <ul class="mob-menu__list">
+    <li class="mob-menu__item"><a href="#" class="mob-menu__link">Преимущества</a></li>
+    <li class="mob-menu__item"><a href="#" class="mob-menu__link">Как приобрести полис</a></li>
+    <li class="mob-menu__item"><a href="#" class="mob-menu__link">Заявка</a></li>
+  </ul>
+  <!-- <?php wp_nav_menu( array('theme_location' => 'menu_main','menu_class' => 'mob-menu__list',
+		'container_class' => 'mob-menu__list','container' => false )); ?>  -->
+  <a href="#callback" class="header__popup-link btn header__popup-link_mob _popup-link">Заявка на расчет</a>
+</div>
 		<main class="page">
 
 			<section id="slider-main" class="slider-main">
@@ -268,10 +329,128 @@
 
 
 		</main>
-		@@include('_footer.html',{})
+		<footer id="footer" class="footer">
+  <div class="footer__container _container">
+
+    <div class="footer__row d-flex">
+
+      <a href="tel:88003454567" class="footer__phone">8 800 345-45-67</a>
+
+      <ul class="menu-list footer__menu">
+        <li class="menu-list__item"><a href="#" class="menu-list__link">Преимущества</a></li>
+        <li class="menu-list__item"><a href="#" class="menu-list__link">Как приобрести полис</a></li>
+        <li class="menu-list__item"><a href="#" class="menu-list__link">Заявка</a></li>
+      </ul>
+
+      <a href="#callback" class="footer__link btn _popup-link">Оставить заявку</a>
+
+    </div>
+
+  </div>
+</footer>
 	</div>
-	@@include('_popup.html',{})
-	@@include('_js.html',{})
+	<!-- Popup-с формой -->
+<div class="popup popup_callback">
+	<div class="popup__content">
+		<div class="popup__body">
+			<div class="popup__close" aria-label="Закрыть модальное окно"></div>
+			<div class="popup__item d-flex">
+				<div class="popup__img">
+					<img src="img/popup.jpg" alt="">
+				</div>
+				<div class="popup__form-block">
+					<h2>Заявка на расчет</h2>
+					<p class="popup__notific">Оставьте заявку и мы свяжемся с Вами в течении 15 минут</p>
+					<form action="#" class="form">
+						<div class="form__line">
+							<input id="name" autocomplete="off" type="text" name="form[]" data-error="Заполните поля" data-value="Имя"
+								class="popup__form-input input _req">
+							<input id="tel2" autocomplete="off" type="text" name="form[]" data-error="Заполните поля"
+								data-value="Телефон" class="popup__form-input input _phone _req">
+							<input id="email" autocomplete="off" type="text" name="form[]" data-error="Заполните поля"
+								data-value="Email" class="popup__form-input input _email _req">
+						</div>
+						<p class="popup__policy">Заполняя данную форму вы соглашаетесь с <a href="#">политикой
+								конфиденциальности</a></p>
+						<button class="popup__form-btn form__btn btn">Заказать</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- <a href="#callback" class="header__popup-link _popup-link">ЗАКАЗАТЬ ЗВОНОК</a> -->
+<!-- =============================================================================================================================== -->
+
+
+<div class="popup popup_popup">
+	<div class="popup__content">
+		<div class="popup__body">
+			<div class="popup__close" aria-label="Закрыть модальное окно"></div>
+		</div>
+	</div>
+</div>
+<!-- =============================================================================================================================== -->
+
+<div class="popup popup_massagename-message">
+	<div class="popup__content">
+		<div class="popup__body">
+			<div class="popup__close" aria-label="Закрыть модальное окно"></div>
+		</div>
+	</div>
+</div>
+<!-- =============================================================================================================================== -->
+
+<div class="popup popup_video">
+	<div class="popup__content">
+		<div class="popup__body">
+			<div class="popup__close popup__close_video" aria-label="Закрыть модальное окно"></div>
+			<div class="popup__video _video"></div>
+		</div>
+	</div>
+</div>
+<!-- <a href="#video" data-video="stFOy0Noahg" class=" _popup-link">Открыть видео</a> -->
+<!-- =============================================================================================================================== -->
+
+<!-- Popup-CSS -->
+<!-- <div id="popup-2" class="popup-2">
+	<a href="#" class="popup__area-2"></a>
+	<div class="popup__body-2">
+		<div class="popup__content-2">
+
+			<a href="#" class="popup__close-2">Close</a>
+			<div class="popup__title">Заказать ворота Дешево!</div>
+			<div class="popup__text">
+				Автоматики для ворот, роллет и фасадных конструкций. Официальный представитель компаний
+				Алютех и REHAU и Авелор
+			</div>
+			<div class="popup__text">
+				Автоматики для ворот, роллет и фасадных конструкций. Официальный представитель компаний
+				Алютех и REHAU и Авелор
+			</div>
+			<div class="popup__text">
+				Автоматики для ворот, роллет и фасадных конструкций. Официальный представитель компаний
+				Алютех и REHAU и Авелор
+			</div>
+			<div class="popup__text">
+				Автоматики для ворот, роллет и фасадных конструкций. Официальный представитель компаний
+				Алютех и REHAU и Авелор
+			</div>
+			<div class="popup__text">
+				Автоматики для ворот, роллет и фасадных конструкций. Официальный представитель компаний
+				Алютех и REHAU и Авелор
+			</div>
+
+		</div>
+	</div>
+</div> -->
+<!-- <a href="#popup-2" class="heading-info__button popup-link"></a> -->
+	<!-- Swiper -->
+<!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+<!-- <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script> -->
+<script src="js/vendors.min.js"></script>
+<script src="js/app.min.js"></script>
 </body>
 
 </html>
