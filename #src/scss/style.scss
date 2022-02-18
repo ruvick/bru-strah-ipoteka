@@ -56,9 +56,9 @@ body {
 
 //<ЗАГОЛОВКИ>=================================================================================================================
 h1 {
-	font-size: 52px;
+	font-size: 65px;
 	font-weight: 700;
-	line-height: 55.2 / 46 *100%;
+	line-height: 68 / 65 *100%;
 	color: #000;}
 h2 {
 	font-size: 46px;
@@ -176,7 +176,8 @@ h4 {
 	}
 
 	&__subtitle {
-		line-height: 24px;
+		font-size: 23px;
+		line-height: 1.2;
 		color: #DADADA;
 	}
 }
@@ -203,11 +204,43 @@ h4 {
 	background: url('../img/sl-main-01.jpg');
 }
 .slider-main__slide-2{
-	background: url('../img/sl-main-02.jpg');
+	background: url('../img/sl-main-03.png');
 }
 
 .slider-bg__link {
 	margin-top: 104px;
+}
+
+.slider-bg__flex {
+	justify-content: space-between;
+}
+.slider-bg__form {
+	flex: 0 1 45%;
+	padding: 25px 45px;
+	background: #fff;
+	border-radius: 10px;
+}
+.slider-bg__form-title {
+	font-size: 32px;
+	line-height: 1.1;
+	margin-bottom: 25px;
+	// color: #fff;
+}
+.slider-bg__form-form {
+}
+.slider-bg__form-form input {
+	// height: 35px;
+	margin-bottom: 15px;
+}
+.slider-bg__form-form input:last-child {
+	margin-bottom: 0;
+}
+.slider-bg__form-footnote {
+	font-size: 18px;
+	margin-top: 25px;
+}
+.slider-bg__form-btn {
+	margin-top: 25px;
 }
 //========================================================================================================================================================
 
