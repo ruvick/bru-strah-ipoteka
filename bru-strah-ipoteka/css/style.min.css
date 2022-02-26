@@ -3179,32 +3179,24 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 .footer {
-  padding: 45px 0;
+  padding: 35px 0;
   border-top: 1px solid #23A455;
 }
 .footer__container {
   display: flex;
   align-items: center;
+  max-width: 100%;
+  padding: 0 50px;
 }
 .footer__row {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
 }
 .footer__menu {
   display: flex;
   flex-wrap: wrap;
-}
-
-.footer__phone {
-  font-size: 25px;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-.footer__link {
-  margin-top: 30px;
 }
 
 .page-recurring {
