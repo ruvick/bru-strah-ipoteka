@@ -31,11 +31,10 @@
       </a>
 
       <ul class="menu-list header__menu-list d-flex">
-        <li class="menu-list__item"><a href="#" class="menu-list__link">Преимущества</a></li>
-        <li class="menu-list__item"><a href="#" class="menu-list__link">Подобрать полис</a></li>
-        <li class="menu-list__item"><a href="#" class="menu-list__link">Как приобрести полис</a></li>
-        <li class="menu-list__item"><a href="#" class="menu-list__link">Заявка</a></li>
-        <li class="menu-list__item"><a href="#" class="menu-list__link">Отзывы</a></li>
+        <li class="menu-list__item"><a href="#advant" class="menu-list__link">Преимущества</a></li>
+        <li class="menu-list__item"><a href="#will-select" class="menu-list__link">Подобрать полис</a></li>
+        <li class="menu-list__item"><a href="#purchase" class="menu-list__link">Как приобрести</a></li>
+        <li class="menu-list__item"><a href="#footer" class="menu-list__link">Контакты</a></li>
       </ul>
       <!-- <?php wp_nav_menu( array('theme_location' => 'menu_main','menu_class' => 'menu__list',
 						'container_class' => 'menu__list','container' => false )); ?>  -->
@@ -62,9 +61,10 @@
 <!-- Мобильное меню -->
 <div class="mob-menu header__mob-menu">
   <ul class="mob-menu__list">
-    <li class="mob-menu__item"><a href="#" class="mob-menu__link">Преимущества</a></li>
-    <li class="mob-menu__item"><a href="#" class="mob-menu__link">Как приобрести полис</a></li>
-    <li class="mob-menu__item"><a href="#" class="mob-menu__link">Заявка</a></li>
+    <li class="mob-menu__item"><a href="#advant" class="mob-menu__link">Преимущества</a></li>
+    <li class="mob-menu__item"><a href="#will-select" class="mob-menu__link">Подобрать полис</a></li>
+    <li class="mob-menu__item"><a href="#purchase" class="mob-menu__link">Как приобрести</a></li>
+    <li class="mob-menu__item"><a href="#footer" class="mob-menu__link">Контакты</a></li>
   </ul>
   <!-- <?php wp_nav_menu( array('theme_location' => 'menu_main','menu_class' => 'mob-menu__list',
 		'container_class' => 'mob-menu__list','container' => false )); ?>  -->
@@ -315,44 +315,6 @@
 				</div>
 			</section>
 
-			<section id="applic" class="applic">
-				<div class="_container">
-
-					<div class="applic__row d-flex">
-
-						<div class="applic__block">
-							<h2 class="applic__block-title">Оставьте заявку на расчет ипотечного страхования</h2>
-							<form action="#" class="applic__block-form">
-								<div class="form__line">
-									<label for="name" class="form__label">ФИО*</label>
-									<input id="name" autocomplete="off" type="text" name="form[]" data-error="Заполните поле"
-										data-value="" class="input _req">
-
-									<label for="tel" class="form__label">Телефон*</label>
-									<input id="tel" autocomplete="off" type="text" name="form[]" data-error="Заполните поле" data-value=""
-										class="input _phone _req">
-
-									<label for="sum" class="form__label">Сумма*</label>
-									<input id="sum" autocomplete="off" type="text" name="form[]" data-error="Заполните поле" data-value=""
-										class="input _digital _req">
-									<p class="applic__block-footnote">* Отправляя заявку, вы соглашаетесь на обработку персональных данных
-									</p>
-								</div>
-								<button type="submit" class="applic__block-form-btn form__btn btn">Оставить заявку</button>
-							</form>
-						</div>
-
-						<div class="applic__block">
-							<div class="applic__block-img">
-								<img src="img/applic.jpg" alt="">
-							</div>
-						</div>
-
-					</div>
-
-				</div>
-			</section>
-
 			<section id="purchase" class="purchase">
 				<div class="_container">
 
@@ -517,66 +479,6 @@
 									размер нанесенного ущерба
 								</p>
 							</div>
-						</div>
-
-					</div>
-
-				</div>
-			</section>
-
-			<section id="reviews" class="reviews">
-				<div class="_container">
-					<h2>Отзывы наших клиентов</h2>
-
-					<div class="reviews__row d-flex">
-
-						<div class="reviews__card d-flex">
-							<div class="reviews__image-wrap">
-								<div class="reviews__image">
-									<img src="img/reviews/01.jpg" alt="">
-								</div>
-							</div>
-							<h4>Алексей</h4>
-							<p class="reviews__date">г.Воронеж</p>
-							<!-- <span class="reviews__like"></span> -->
-							<p class="reviews__descp">
-								Полис сделали быстро! Очень понравилось, что заранее напомнили об окончании полиса. Все подготовили и
-								прислали ссылку на оплату!
-								Теперь буду рекомендовать своим друзьям и знакомым.
-							</p>
-						</div>
-
-						<div class="reviews__card d-flex">
-							<div class="reviews__image-wrap">
-								<div class="reviews__image">
-									<img src="img/reviews/02.jpg" alt="">
-								</div>
-							</div>
-							<h4>Маргарита</h4>
-							<p class="reviews__date">г.Иркутск</p>
-							<!-- <span class="reviews__like"></span> -->
-							<p class="reviews__descp">
-								Второй год страхуем ипотеку через Единый центр страхования. Отличная цена, квалифицированные сотрудники.
-								Все делают быстро.
-								На все вопросы отвечают. Спасибо за работу
-							</p>
-						</div>
-
-						<div class="reviews__card d-flex">
-							<div class="reviews__image-wrap">
-								<div class="reviews__image">
-									<img src="img/reviews/03.jpg" alt="">
-								</div>
-							</div>
-							<h4>Ирина</h4>
-							<p class="reviews__date">г.Белгород</p>
-							<!-- <span class="reviews__like"></span> -->
-							<p class="reviews__descp">
-								Мне все нравится. Уже третий год оформляю страховку по ипотеке в "Едином центре страхования", не надо
-								никуда ехать,
-								всё в электронном виде. В банке полис приняли быстро и без замечаний. Спасибо компании за великолепное
-								обслуживание.
-							</p>
 						</div>
 
 					</div>
