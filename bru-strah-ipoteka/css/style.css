@@ -1,8 +1,6 @@
 @charset "UTF-8";
 
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;
-
-700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap");
 * {
   padding: 0px;
   margin: 0px;
@@ -3349,6 +3347,9 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 .contacts {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 225px;
+          flex: 0 0 225px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -3453,7 +3454,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   right: -100%;
   width: 50%;
   height: 100%;
-  padding: 35px 10px 0px 20px;
+  padding: 45px 10px 0px 20px;
   background: #fff;
   -webkit-box-shadow: 0px 3px 5px 0px black;
           box-shadow: 0px 3px 5px 0px black;
@@ -3466,12 +3467,16 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 .mob-menu li a {
   display: inline-block;
-  font-size: 16px;
-  padding-bottom: 13px;
+  font-size: 18px;
+  padding-bottom: 15px;
 }
 
 .mob-menu.active {
   right: 0%;
+}
+
+.mob-menu__list {
+  margin-bottom: 8px;
 }
 
 .mob-phone-icon {
@@ -4473,10 +4478,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
             flex: 0 1 33.333%;
   }
 
-  .header__popup-link {
-    margin-top: 10px;
-  }
-
   .slider-bg__form {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 75%;
@@ -4534,6 +4535,21 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
     -webkit-box-flex: 0;
         -ms-flex: 0 1 50%;
             flex: 0 1 50%;
+  }
+
+  .header__logo {
+    margin-right: 15px;
+  }
+
+  .logo-icon {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 150px;
+            flex: 0 0 150px;
+    height: 50px;
+  }
+
+  .logo-icon__text {
+    font-size: 12px;
   }
 }
 
@@ -4641,13 +4657,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
     margin-right: 20px;
   }
 
-  .header__logo {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 35px;
-            flex: 0 0 35px;
-    height: 35px;
-  }
-
   .header__navigation {
     padding: 0;
   }
@@ -4658,13 +4667,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
   .header__phone {
     font-size: 18px;
-  }
-
-  .header__popup-link_mob {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    margin-left: 0;
+    margin-bottom: 0;
   }
 
   section {
@@ -4850,8 +4853,11 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
     display: none;
   }
 
-  .logo-icon__text {
-    display: none;
+  .header__popup-link_mob {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    margin-left: 0;
   }
 
   .logo-icon:before {
@@ -4900,6 +4906,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
   .slider-bg__slide {
     background-position: 80% 0% !important;
+  }
+
+  .mob-menu {
+    padding: 30px 10px 0px 20px;
   }
 }
 
@@ -5143,6 +5153,24 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   .slider-bg__form {
     padding: 25px;
   }
+
+  .header__contacts {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 160px;
+            flex: 0 0 160px;
+    margin-right: 15px;
+  }
+
+  .logo-icon {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 120px;
+            flex: 0 0 120px;
+    height: 30px;
+  }
+
+  .logo-icon__text {
+    font-size: 10px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -5308,6 +5336,32 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
   .slider-bg__form-footnote {
     font-size: 14px;
+  }
+
+  .logo-icon {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100px;
+            flex: 0 0 100px;
+    height: 30px;
+  }
+
+  .header__logo {
+    margin-right: 0;
+  }
+
+  .logo-icon__text {
+    font-size: 8px;
+  }
+
+  .header__contacts {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 135px;
+            flex: 0 0 135px;
+    margin-right: 10px;
+  }
+
+  .header__phone {
+    font-size: 15px;
   }
 }
 
