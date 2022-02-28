@@ -78,6 +78,27 @@
     flex: 0 1 33.333%;}
   .slider-bg__form {
     flex: 0 1 75%;}
+    .card {
+      height: 20rem;}
+    .card-side {
+      height: 20rem;}
+    .card-side h3 {
+      font-size: 18px;
+      margin-bottom: 10px;}
+    .card-side p {
+      font-size: 14px;}
+    .card-side-front-img {
+       margin-top: 15px;}
+    .card-side-back h4 {
+      font-size: 16px;
+      margin-bottom: 10px; }
+    .card-side p {
+      font-size: 12px;}
+    .card-side__list {
+      padding-left: 5px;
+      margin-bottom: 15px;}
+    .card-side__list li {
+      font-size: 12px;}
 }
 
 @media (max-width: 960px) {
