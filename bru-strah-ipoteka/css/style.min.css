@@ -3877,12 +3877,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
     margin-right: 20px;
   }
 }
-@media (max-width: 1280px) {
-  .slider-bg__form {
-    flex: 0 1 45%;
-    border-radius: 10px;
-  }
-}
 @media (max-width: 1200px) {
   .security__column-img {
     height: 480px;
@@ -3903,7 +3897,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   }
 
   .slider-bg__form {
-    flex: 0 1 60%;
+    flex: 0 0 50%;
   }
 }
 @media (max-width: 1024px) {
@@ -3943,7 +3937,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
   .advant__column {
     padding: 0 10px;
-    margin-bottom: 20px;
   }
 
   .news__wrap {
@@ -3970,7 +3963,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   }
 
   .slider-bg__form {
-    flex: 0 1 75%;
+    flex: 0 0 53%;
   }
 
   .card {
@@ -4010,6 +4003,19 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
   .card-side__list li {
     font-size: 12px;
+  }
+
+  .slider-bg__form-btn {
+    width: auto;
+  }
+}
+@media (max-width: 980px) {
+  .slider-bg__descp {
+    flex: 0 1 25%;
+  }
+
+  .slider-bg__form {
+    flex: 0 1 50%;
   }
 }
 @media (max-width: 960px) {
@@ -4064,6 +4070,23 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
   .header__mail {
     display: none;
+  }
+
+  .slider-bg__flex {
+    flex-wrap: wrap;
+  }
+
+  .slider-bg__descp {
+    flex: 0 1 100%;
+    margin-bottom: 30px;
+  }
+
+  .slider-bg__form {
+    flex: 0 1 100%;
+  }
+
+  .slider-bg__form-btn {
+    width: 48%;
   }
 }
 @media (max-width: 830px) {
@@ -4523,6 +4546,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   .card-side-front-img {
     margin-top: 5px;
   }
+
+  .slider-bg__form-btn {
+    width: auto;
+  }
 }
 @media (max-width: 700px) {
   .mob-menu {
@@ -4763,7 +4790,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   }
 
   .slider-bg__form-form input {
-    flex: 0 1 100%;
+    flex: 0 1 49%;
   }
 
   .footer {
@@ -4907,6 +4934,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
   .card-side {
     height: 20rem;
+  }
+
+  .slider-bg__form-form input {
+    flex: 0 1 100%;
   }
 }
 @media (max-width: 375px) {
