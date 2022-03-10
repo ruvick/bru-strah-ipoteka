@@ -213,8 +213,8 @@ h4 {
 	justify-content: space-between;
 }
 .slider-bg__form {
-	flex: 0 1 41%;
-	padding: 25px 45px;
+	flex: 0 0 50%;
+	padding: 25px 43px;
 	background: #fff;
 	border-radius: 10px;
 }
@@ -225,26 +225,33 @@ h4 {
 	// color: #fff;
 }
 .slider-bg__form-form {
+
+}
+.slider-bg__form-line {
+	display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 .slider-bg__form-form input {
-	// height: 35px;
+	flex: 0 1 48%;
 	margin-bottom: 15px;
 }
 .slider-bg__form-form input:last-child {
 	margin-bottom: 0;
 }
 .slider-bg__form-footnote {
-	font-size: 18px;
-	margin-top: 25px;
+	font-size: 14px;
+	// margin-top: 25px;
 }
 .slider-bg__form-btn {
+	width: 48%;
 	margin-top: 25px;
 }
 //========================================================================================================================================================
 
 .advant {
 	padding: 75px 0 50px 0;
-	background: #eff7ff82;
+	background: #eff7ffad;
 
 	&__title {
 
@@ -258,8 +265,7 @@ h4 {
 	&__column {
 		display: flex;
 		flex: 0 1 33.333%;
-		padding: 0 15px;
-		margin-bottom: 30px;
+		padding: 10px 15px;
 		overflow: hidden;
 	}
 
@@ -268,12 +274,13 @@ h4 {
 		background: #fff;
 		border-radius: 10px;
 		overflow: hidden;
+		box-shadow: 0px 0px 10px rgb(0 0 0 / 8%);
 	}
 
 	&__card-name {
 		display: flex;
 		align-items: center;
-		margin-bottom: 16px;
+		margin-bottom: 23px;
 	}
 
 	&__card-icon {
@@ -285,6 +292,7 @@ h4 {
 		margin-right: 20px;
 		border-radius: 10px;
 		background: #23A455;
+		opacity: 0.8;
 		&:before {
 			content:'';
 			float: left;
@@ -319,6 +327,21 @@ h4 {
 	height: 39px;
 	background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgZmlsbD0ibm9uZSIgaGVpZ2h0PSIyNiIgdmlld0JveD0iMCAwIDI2IDI2IiB3aWR0aD0iMjYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEzIDI1QzE5LjYyNzQgMjUgMjUgMTkuNjI3NCAyNSAxM0MyNSA2LjM3MjU4IDE5LjYyNzQgMSAxMyAxQzYuMzcyNTggMSAxIDYuMzcyNTggMSAxM0MxIDE5LjYyNzQgNi4zNzI1OCAyNSAxMyAyNVoiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS13aWR0aD0iMiIvPjxwYXRoIGQ9Ik0xNi42IDE0LjRIMTIuMiIgc3Ryb2tlPSIjZmZmIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgc3Ryb2tlLXdpZHRoPSIyIi8+PHBhdGggZD0iTTEyIDhWMTQiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS13aWR0aD0iMiIvPjwvc3ZnPg==');
 }
+.advant__card-icon_01-01:before {
+	width: 38px;
+	height: 38px;
+	background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGZpbGw9IiNmZmYiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDQ4IDQ4IiBoZWlnaHQ9IjQ4cHgiIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDQ4IDQ4IiB3aWR0aD0iNDhweCIgeD0iMHB4IiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB5PSIwcHgiPjxnIGlkPSJFeHBhbmRlZCI+PGc+PGc+PHBhdGggZD0iTTQyLDQ4SDI4VjM1aC04djEzSDZWMjdjMC0wLjU1MiwwLjQ0Ny0xLDEtMXMxLDAuNDQ4LDEsMXYxOWgxMFYzM2gxMnYxM2gxMFYyOGMwLTAuNTUyLDAuNDQ3LTEsMS0xczEsMC40NDgsMSwxVjQ4eiIvPjwvZz48Zz48cGF0aCBmaWxsPSIjZmZmIiBkPSJNNDcsMjdjLTAuMjQ5LDAtMC40OTctMC4wOTItMC42OTEtMC4yNzdMMjQsNS4zODRMMS42OTEsMjYuNzIzYy0wLjM5OSwwLjM4MS0xLjAzMiwwLjM2OC0xLjQxNC0wLjAzMSAgICAgYy0wLjM4Mi0wLjM5OS0wLjM2Ny0xLjAzMiwwLjAzMS0xLjQxNEwyNCwyLjYxNmwyMy42OTEsMjIuNjYxYzAuMzk4LDAuMzgyLDAuNDEzLDEuMDE1LDAuMDMxLDEuNDE0ICAgICBDNDcuNTI2LDI2Ljg5Niw0Ny4yNjQsMjcsNDcsMjd6Ii8+PC9nPjxnPjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik0zOSwxNWMtMC41NTMsMC0xLTAuNDQ4LTEtMVY4aC02Yy0wLjU1MywwLTEtMC40NDgtMS0xczAuNDQ3LTEsMS0xaDh2OEM0MCwxNC41NTIsMzkuNTUzLDE1LDM5LDE1eiIvPjwvZz48L2c+PC9nPjwvc3ZnPg==');
+}
+.advant__card-icon_02-02:before {
+	width: 38px;
+	height: 38px;
+	background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMzJweCIgaGVpZ2h0PSIzMnB4IiB2aWV3Qm94PSIwIDAgMzIgMzIiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDMyIDMyIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnIGlkPSJoZWFydCI+DQoJPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGZpbGw9IiNmZmYiIGQ9Ik0yOS4xOTMsNS4yNjVjLTMuNjI5LTMuNTk2LTkuNDMyLTMuNjcxLTEzLjE5MS0wLjI4OA0KCQlDMTIuMjQyLDEuNTk0LDYuNDQxLDEuNjY5LDIuODEsNS4yNjVjLTMuNzQxLDMuNzA0LTMuNzQxLDkuNzA5LDAsMTMuNDE1YzEuMDY5LDEuMDU5LDExLjA1MywxMC45NDEsMTEuMDUzLDEwLjk0MQ0KCQljMS4xODMsMS4xNzIsMy4wOTYsMS4xNzIsNC4yNzgsMGMwLDAsMTAuOTMyLTEwLjgyMiwxMS4wNTMtMTAuOTQxQzMyLjkzNiwxNC45NzQsMzIuOTM2LDguOTY5LDI5LjE5Myw1LjI2NXogTTI3Ljc2OCwxNy4yNjgNCgkJTDE2LjcxNSwyOC4yMDljLTAuMzkzLDAuMzkxLTEuMDM0LDAuMzkxLTEuNDI1LDBMNC4yMzcsMTcuMjY4Yy0yLjk1LTIuOTItMi45NS03LjY3MSwwLTEwLjU5MQ0KCQljMi44NDQtMi44MTUsNy40MTYtMi45MTQsMTAuNDA5LTAuMjIybDEuMzU2LDEuMjJsMS4zNTUtMS4yMmMyLjk5NC0yLjY5Miw3LjU2Ni0yLjU5NCwxMC40MSwwLjIyMg0KCQlDMzAuNzE3LDkuNTk2LDMwLjcxNywxNC4zNDcsMjcuNzY4LDE3LjI2OHoiLz4NCgk8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZmlsbD0iI2ZmZiIgZD0iTTkuMjUzLDcuNTAxYy0wLjAwMiwwLTAuMDAyLDAuMDAxLTAuMDA0LDAuMDAxDQoJCWMtMi4zNDUsMC4wMDItNC4yNDYsMS45MDMtNC4yNDYsNC4yNDlsMCwwYzAsMC4yNzYsMC4yMjQsMC41LDAuNSwwLjVzMC41LTAuMjI0LDAuNS0wLjVWMTEuNzVjMC0xLjc5NCwxLjQ1NS0zLjI0OSwzLjI0OS0zLjI0OQ0KCQloMC4wMDFjMC4yNzYsMCwwLjUtMC4yMjQsMC41LTAuNVM5LjUzLDcuNTAxLDkuMjUzLDcuNTAxeiIvPg0KPC9nPg0KPC9zdmc+DQo=');
+}
+.advant__card-icon_03-03:before {
+	width: 38px;
+	height: 38px;
+	background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgZmlsbD0ibm9uZSIgaGVpZ2h0PSIyNiIgdmlld0JveD0iMCAwIDI2IDI2IiB3aWR0aD0iMjYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTguNSAxNEwxMS4xIDE2LjYiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS13aWR0aD0iMiIvPjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik0xOC4yIDEwTDExLjYgMTYuNiIgc3Ryb2tlPSIjZmZmIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgc3Ryb2tlLXdpZHRoPSIyIi8+PHBhdGggZD0iTTEzIDI1QzE5LjYyNzQgMjUgMjUgMTkuNjI3NCAyNSAxM0MyNSA2LjM3MjU4IDE5LjYyNzQgMSAxMyAxQzYuMzcyNTggMSAxIDYuMzcyNTggMSAxM0MxIDE5LjYyNzQgNi4zNzI1OCAyNSAxMyAyNVoiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS13aWR0aD0iMiIvPjwvc3ZnPg==');
+}
 //========================================================================================================================================================
 
 .will-select {
@@ -339,7 +362,7 @@ h4 {
 .card {
 	perspective: 150rem;
 	position: relative;
-	height: 40rem;
+	height: 35rem;
 	/* max-width: 580px; */
 	flex: 0 1 32%;
 	box-shadow: none;
@@ -370,6 +393,10 @@ h4 {
   // background-image: linear-gradient(43deg, #4158D0 0%,#C850C0 46%, #FFCC70 100%);
 	border: 1px solid #80B763;
 	overflow: auto;
+}
+
+.card-side.back::-webkit-scrollbar {
+	display: none;
 }
 
 .card-side.front {
@@ -548,11 +575,12 @@ h4 {
 
 .needed {
 	padding: 45px 0;
-	background: #eff7ff82;
+	// background: #eff7ff82;
+	background: #eff7ffad;
 }
 
 .needed__title {
-	margin-bottom: 45px;
+	margin-bottom: 15px;
 }
 .needed__subtitle {
 	margin-bottom: 35px;
@@ -730,18 +758,17 @@ h4 {
 	&__descp-list-item {
 		font-size: 22px;
 		line-height: 28px;
-		padding-bottom: 15px;
-		margin-bottom: 20px;
+		margin-bottom: 25px;
 		&:before {
 			content:'';
 			float: left;
-			width: 16px;
-			height: 14px;
+			flex: 0 0 10px;
+			width: 10px;
+			height: 10px;
+			background: #23A455;
+			border-radius: 50%;
+			margin-top: 8px;
 			margin-right: 10px;
-			background-position: 0 0;
-			background-size: 100%;
-			background-repeat: no-repeat;
-			background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciICB2aWV3Qm94PSIwIDAgNDggNDgiIHdpZHRoPSI0OHB4IiBoZWlnaHQ9IjQ4cHgiPjxwYXRoIGZpbGw9IiM0M0EwNDciIGQ9Ik00MC42IDEyLjFMMTcgMzUuNyA3LjQgMjYuMSA0LjYgMjkgMTcgNDEuMyA0My40IDE0Ljl6Ii8+PC9zdmc+');
 		}
 	}
 }
@@ -768,7 +795,11 @@ h4 {
 }
 //========================================================================================================================================================
 
-
+.advant__card-icon-instruction {
+	font-size: 30px;
+	color: #fff;
+}
+//========================================================================================================================================================
 
 
 //</ОСНОВНОЙ БЛОК>====================================================================================================
