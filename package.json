@@ -5,6 +5,11 @@
 	"author": "ruvick",
 	"private": true,
 	"license": "GNU General Public License (GPL)",
+	"scripts": {
+		"send_to_host": "cd bru-strah-ipoteka && scp -C -r * j61020147@j61020147.myjino.ru:domains/ips-service.ru",
+		"send_sender": "cd #src && scp sender.php j61020147@j61020147.myjino.ru:domains/ips-service.ru",
+		"deploy": "gulp build && npm run send_to_host"
+	},
 	"devDependencies": {
 		"browser-sync": "latest",
 		"del": "latest",

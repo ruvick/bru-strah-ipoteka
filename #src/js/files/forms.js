@@ -530,111 +530,58 @@ if (priceSlider) {
 	}
 }
 // ============================================================================================================
+// Отправка файла плагином PHPMailer 
+document.addEventListener('DOMContentLoaded', function () {
+	let send_btns = document.querySelectorAll("._send_btn")
+	send_btns.forEach(element => {
+		element.onclick = (e) => {
+			e.preventDefault()
+			let formid = element.dataset.formid;
+			let msg = element.dataset.msg;
+			let form = document.getElementById(formid);
 
-// Отправка файла плагином PHPMailer ==========================================================================
-// document.addEventListener('DOMContentLoaded', function () {
-// 	const form = document.getElementById('form');
-// 	form.addEventListener('submit', formSend);
+			let name = (form.querySelectorAll("input[name=name]").length == 0) ? "" : form.querySelectorAll("input[name=name]")[0].value;
+			let tel = (form.querySelectorAll("input[name=phone]").length == 0) ? "" : form.querySelectorAll("input[name=phone]")[0].value;
+			if (tel == "Телефон*") { form.querySelectorAll("input[name=phone]")[0].classList.add("_error"); return }
+			let mail = (form.querySelectorAll("input[name=mail]").length == 0) ? "" : form.querySelectorAll("input[name=mail]")[0].value;
+			let number = (form.querySelectorAll("input[name=number]").length == 0) ? "" : form.querySelectorAll("input[name=number]")[0].value;
 
-// 	async function formSend(e) {
-// 		e.preventDefault();
+			console.log(name)
+			console.log(tel)
+			console.log(mail)
+			console.log(number)
+			console.log(msg)
 
-// 		let error = formValidate(form);
+			var params = new URLSearchParams()
 
-// 		let formData = new FormData(form);
-// 		formData.append('image', formImage.files[0]);
+			params.append('name', name)
+			params.append('tel', tel)
+			params.append('mail', mail)
+			params.append('number', number)
+			params.append('msg', msg)
 
-// 		if (error === 0) {
-// 			form.classList.add('_sending');
-// 			let response = await fetch('sendmail.php', {
-// 				method: 'POST',
-// 				body: formData
-// 			});
-// 			if (response.ok) {
-// 				let result = await response.json();
-// 				alert(result.message);
-// 				formPreview.innerHTML = '';
-// 				form.reset();
-// 				form.classList.remove('_sending');
-// 			} else {
-// 				alert("Ошибка");
-// 				form.classList.remove('_sending');
-// 			}
-// 		} else {
-// 			alert('Заполните обязательные поля');
-// 		}
+			var xhr = new XMLHttpRequest();
 
-// 	}
+			xhr.onload = function (e) {
 
+				if (xhr.status == 200) {
 
-// 	function formValidate(form) {
-// 		let error = 0;
-// 		let formReq = document.querySelectorAll('._req');
+					location.href = "/thanks.html"
 
-// 		for (let index = 0; index < formReq.length; index++) {
-// 			const input = formReq[index];
-// 			formRemoveError(input);
+				} else {
+					console.log(xhr.status)
+					console.log(xhr.statusText)
+					alert("При отправке произошла ошибка")
+				}
 
-// 			if (input.classList.contains('_email')) {
-// 				if (emailTest(input)) {
-// 					formAddError(input);
-// 					error++;
-// 				}
-// 			} else if (input.getAttribute("type") === "checkbox" && input.checked === false) {
-// 				formAddError(input);
-// 				error++;
-// 			} else {
-// 				if (input.value === '') {
-// 					formAddError(input);
-// 					error++;
-// 				}
-// 			}
-// 		}
-// 		return error;
-// 	}
-// 	function formAddError(input) {
-// 		input.parentElement.classList.add('_error');
-// 		input.classList.add('_error');
-// 	}
-// 	function formRemoveError(input) {
-// 		input.parentElement.classList.remove('_error');
-// 		input.classList.remove('_error');
-// 	}
-// 	//Функция теста email
-// 	function emailTest(input) {
-// 		return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
-// 	}
+			}
 
-// 	//Получаем инпут file в переменную
-// 	const formImage = document.getElementById('formImage');
-// 	//Получаем див для превью в переменную
-// 	const formPreview = document.getElementById('formPreview');
+			xhr.onerror = function (msg) {
+				console.log("eroroa" + xhr.statusText)
+			}
 
-// 	//Слушаем изменения в инпуте file
-// 	formImage.addEventListener('change', () => {
-// 		uploadFile(formImage.files[0]);
-// 	});
-
-// 	function uploadFile(file) {
-// 		// провераяем тип файла
-// 		if (!['image/jpeg', 'image/png', 'image/gif'].includes(file.type)) {
-// 			alert('Разрешены только изображения.');
-// 			formImage.value = '';
-// 			return;
-// 		}
-// 		// проверим размер файла (<2 Мб)
-// 		if (file.size > 2 * 1024 * 1024) {
-// 			alert('Файл должен быть менее 2 МБ.');
-// 			return;
-// 		}
-
-// 		var reader = new FileReader();
-// 		reader.onload = function (e) {
-// 			formPreview.innerHTML = `<img src="${e.target.result}" alt="Фото">`;
-// 		};
-// 		reader.onerror = function (e) {
-// 			alert('Ошибка');
-// 		};
-// 		reader.readAsDataURL(file);
-// 	}
-// });
+			xhr.open('POST', "http://ips-service.ru/sender.php", true);
+			xhr.send(params);
+		}
+	})
+})
