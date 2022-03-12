@@ -23,15 +23,18 @@ if (
                         <title>'.$_REQUEST["msg"].'</title>
                     </head>
                     <body>
-                        <p>Имя: '.$_REQUEST['name'].'</p>
+                        <p>ФИО: '.$_REQUEST['name'].'</p>
+                        <p>Дата рождения: '.$_REQUEST['date'].'</p>
+                        <p>Пол: '.$_REQUEST['gender'].'</p>
+												<p>Сумма: '.$_REQUEST['sum'].'</p>
+												<p>Банк: '.$_REQUEST['bank'].'</p>
+												<p>Этажность: '.$_REQUEST['etazhnost'].'</p>
                         <p>Телефон: '.$_REQUEST['tel'].'</p> 
-                        <p>e-mail: '.$_REQUEST['mail'].'</p>                   
-                        <p>ГосНомер: '.$_REQUEST['number'].'</p>                   
-                        <p>Форма: '.$_REQUEST['msg'].'</p>                   
+                        <p>e-mail: '.$_REQUEST['mail'].'</p>                                     
                     </body>
                 </html>'; 
         $headers  = "Content-type: text/html; charset=utf-8 \r\n"; 
-        $headers .= "From: Заявка с сайта СЕРВИС ИПОТЕЧНОГО СТРАХОВАНИЯ <rudikov-web@yandex.ru>\r\n";
+        $headers .= "From: Заявка с сайта СЕРВИС ИПОТЕЧНОГО СТРАХОВАНИЯ <noreply@ips-service.ru/>\r\n";
         if (mail($to, $subject, $message, $headers)) {
             http_response_code(200);
             die(array());
