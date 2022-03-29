@@ -544,7 +544,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			let tel = (form.querySelectorAll("input[name=phone]").length == 0) ? "" : form.querySelectorAll("input[name=phone]")[0].value;
 			if (tel == "Телефон*") { form.querySelectorAll("input[name=phone]")[0].classList.add("_error"); return }
 			let mail = (form.querySelectorAll("input[name=mail]").length == 0) ? "" : form.querySelectorAll("input[name=mail]")[0].value;
-			// let date = (form.querySelectorAll("input[name=date]").length == 0) ? "" : form.querySelectorAll("input[name=date]")[0].value;
+			let date = (form.querySelectorAll("input[name=date]").length == 0) ? "" : form.querySelectorAll("input[name=date]")[0].value;
 			let gender = (form.querySelectorAll("input[name=gender]").length == 0) ? "" : form.querySelectorAll("input[name=gender]")[0].value;
 			let sum = (form.querySelectorAll("input[name=sum]").length == 0) ? "" : form.querySelectorAll("input[name=sum]")[0].value;
 			let bank = (form.querySelectorAll("input[name=bank]").length == 0) ? "" : form.querySelectorAll("input[name=bank]")[0].value;
@@ -561,7 +561,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			params.append('name', name)
 			params.append('tel', tel)
 			params.append('mail', mail)
-			// params.append('date', date)
+			params.append('date', date)
 			params.append('gender', gender)
 			params.append('sum', sum)
 			params.append('bank', bank)
